@@ -23,3 +23,16 @@ var me = new Student();
 
 me.initialize("John", 25);
 me.learn("Inheritance");
+
+var Teacher = function() {};
+Teacher.prototype = new Person();
+
+Teacher.prototype.teach = function(subject)
+{
+    console.log(this.name + " teaches " + subject);   
+}
+
+var him = new Teacher();
+
+him.initialize("Bob", 45);
+him.teach("inheritance");
